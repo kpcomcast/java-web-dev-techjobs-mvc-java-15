@@ -32,9 +32,10 @@ public class SearchController {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
             model.addAttribute("title", "Job Search by " + columnChoices.get(searchType) + ": " + searchTerm);
         }
+        model.addAttribute("columns", columnChoices);
         model.addAttribute("jobs", jobs);
 
-        return "list-jobs";
+        return "search";
     }
 
 }
