@@ -9,6 +9,11 @@
 <div class="container body-content">
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <p th:if="${size > 0}">
+        Displaying
+        <strong th:text="${size}"></strong>
+        results...
+    </p>
 
     <form th:action="@{/search/results}" method = "post">
         <h2>Search by:</h2>
