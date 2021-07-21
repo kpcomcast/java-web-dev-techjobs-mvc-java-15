@@ -21,10 +21,10 @@
                 <td>
                     <p><b>ID: <span th:text = "${job.id}"></span></b></p>
                     <div><b>Name: </b><span th:text = "${job.name}"></span></div>
-                    <div><b>Employer: </b><span th:text = "${job.employer}"></span></div>
-                    <div><b>Location: </b><span th:text = "${job.location}"></span></div>
-                    <div><b>Position Type: </b><span th:text = "${job.positionType}"></span></div>
-                    <div><b>Skill: </b><span th:text = "${job.coreCompetency}"></span></div>
+                    <div><b>Employer: </b><a th:href="@{/search/results(searchType='employer',searchTerm=${job.employer})}" th:text="${job.employer}"></a></div>
+                    <div><b>Location: </b><a th:href="@{/search/results(searchType='location',searchTerm=${job.location})}" th:text="${job.location}"></a></div>
+                    <div><b>Position Type: </b><a th:href="@{/search/results(searchType='positionType',searchTerm=${job.positionType})}" th:text="${job.positionType}"></a></div>
+                    <div><b>Skill: </b><a th:href="@{/search/results(searchType='coreCompetency',searchTerm=${job.coreCompetency})}" th:text="${job.coreCompetency}"></a></div>
                 </td>
         </tr>
     </table>
