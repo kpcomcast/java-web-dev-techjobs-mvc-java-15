@@ -45,12 +45,12 @@
     <table class="job-listing">
         <tr th:each="job : ${jobs}">
             <td>
-                <p th:text = "'ID: ' + ${job.id}"></p>
-                <p th:text = "'Name: ' + ${job.name}"></p>
-                <p th:text = "'Employer: ' + ${job.employer}"></p>
-                <p th:text = "'Location: ' + ${job.location}"></p>
-                <p th:text = "'Position Type: ' + ${job.positionType}"></p>
-                <p th:text = "'Skill: ' + ${job.coreCompetency}"></p>
+                <p><b>ID: <span th:text = "${job.id}"></span></b></p>
+                <div><b>Name: </b><span th:text = "${job.name}"></span></div>
+                <div><b>Employer: </b><span th:text = "${job.employer}"></span></div>
+                <div><b>Location: </b><span th:text = "${job.location}"></span></div>
+                <div><b>Position Type: </b><span th:text = "${job.positionType}"></span></div>
+                <div><b>Skill: </b><span th:text = "${job.coreCompetency}"></span></div>
             </td>
         </tr>
     </table>

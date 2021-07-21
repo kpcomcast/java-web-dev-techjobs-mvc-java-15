@@ -30,7 +30,7 @@ table.job-listing {
 }
 
 table.job-listing td:first-child {
-    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 table.job-listing td:last-child {
